@@ -10,12 +10,12 @@ import Foundation
 
 final class DateTest {
     
-    static let shared = DateTest()
     private var start: Date!
-    private let dateFormatter = DateFormatter()
     
-    private init() {
-    }
+    // static instance
+    static let shared = DateTest()
+    // private initializer
+    private init() {}
     
     func printStartDate() {
         start = Date()

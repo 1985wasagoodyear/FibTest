@@ -7,7 +7,6 @@
 //
 
 func recursiveFib(_ num: Int64) -> Int64 {
-    
     if (num <= 1) { return num }
     return recursiveFib(num-1) + recursiveFib(num-2);
 }
@@ -19,6 +18,5 @@ func iterativeFib(_ num: Int64) -> Int64 {
         let temp = prev + next
         (prev, next) = (next, temp)
     }
-    
     return next
 }
