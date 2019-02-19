@@ -6,9 +6,10 @@
 //  Copyright © 2019 Kevin Yu. All rights reserved.
 //
 
-// largest possible Int without overflow is 92
+// largest possible Int64 without overflow is 92
+// largest possible UInt64 without overflow is 93
 // test case: 40th number
-let num: Int64 = 40
+let num: UInt64 = 40
 
 print("Starting Iterative Algorithm:")
 DateTest.shared.printStartDate()
