@@ -8,14 +8,17 @@
 
 func recursiveFib(_ num: UInt64) -> UInt64 {
     if (num <= 1) { return num }
-    return recursiveFib(num-1) + recursiveFib(num-2);
+    guard let result = recursiveFib(num-1) ?+ recursiveFib(num-2) else {
+        return 0
+    }
+    return result
 }
 
 func iterativeFib(_ num: UInt64) -> UInt64 {
     if num == 0 { return 0 }
     var prev: UInt64 = 0, next: UInt64 = 1
     for _ in 1..<num {
-        let temp = prev + next
+        guard let temp = prev ?+ next else { return 0 }
         (prev, next) = (next, temp)
     }
     return next

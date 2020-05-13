@@ -10,22 +10,30 @@
 // largest possible UInt64 without overflow is 93
 // test case: 40th number
 let num: UInt64 = 40
+let dateTest = DateTest()
 
-print("Starting Iterative Algorithm:")
-DateTest.shared.printStartDate()
+func test(name: String, _ work: () -> Void) {
+    print("""
+        *************************************
+        \(name)
+        *************************************
+        """)
+    dateTest.printStartDate()
+    defer { dateTest.printEndDate() }
+    work()
+}
 
-let ans = iterativeFib(num) // ~>2000 milliseconds
-
-DateTest.shared.printEndDate()
-print("Result: \(ans)")
+test(name: "1 - Starting Iterative Algorithm:") {
+    let ans = iterativeFib(num) // ~>2000 milliseconds
+    print("Fibonacci result: \(ans)")
+}
 
 print("\nPress ENTER for Recursive Algorithm:")
 let _ = readLine()
 
-print("Starting Iterative Algorithm:")
-DateTest.shared.printStartDate()
+test(name: "2 - Starting Recursive Algorithm:") {
+    let ans = recursiveFib(num) // ~5 milliseconds
+    print("Fibonacci result: \(ans)")
+}
 
-let ans2 = recursiveFib(num) // ~5 milliseconds
-
-DateTest.shared.printEndDate()
-print("Result: \(ans)\n")
+print("\n")

@@ -10,22 +10,17 @@ import Foundation
 
 final class DateTest {
     
-    private var start: Date!
-    
-    // static instance
-    static let shared = DateTest()
-    // private initializer
-    private init() {}
+    private var start: Date = Date()
     
     func printStartDate() {
         start = Date()
-        print("Started Testing: \(start.description)")
+        print("Started testing at: \(start.description)")
     }
     
     func printEndDate() {
         let end = Date()
-        print("Ended Testing: \(end.description)")
+        print("Ended testing at: \(end.description)")
         let totalTime = end.timeIntervalSince(start)
-        print("Total time: \(totalTime * 1000) milliseconds")
+        print("Total time elapsed: \(totalTime * 1000) milliseconds")
     }
 }

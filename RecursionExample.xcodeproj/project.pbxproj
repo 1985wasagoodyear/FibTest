@@ -10,6 +10,7 @@
 		3F498AC92212325C00C4DCB4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F498AC82212325C00C4DCB4 /* main.swift */; };
 		3F498AD0221232C200C4DCB4 /* DateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F498ACF221232C200C4DCB4 /* DateTest.swift */; };
 		3F498AD22212384600C4DCB4 /* Algorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F498AD12212384600C4DCB4 /* Algorithms.swift */; };
+		3F79C70D246CA91000C47406 /* Operator+Overflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79C70C246CA91000C47406 /* Operator+Overflow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		3F498AC82212325C00C4DCB4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3F498ACF221232C200C4DCB4 /* DateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTest.swift; sourceTree = "<group>"; };
 		3F498AD12212384600C4DCB4 /* Algorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
+		3F79C70C246CA91000C47406 /* Operator+Overflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operator+Overflow.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				3F498AC82212325C00C4DCB4 /* main.swift */,
+				3F79C70C246CA91000C47406 /* Operator+Overflow.swift */,
 				3F498AD12212384600C4DCB4 /* Algorithms.swift */,
 				3F498ACF221232C200C4DCB4 /* DateTest.swift */,
 			);
@@ -95,11 +98,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Kevin Yu";
 				TargetAttributes = {
 					3F498AC42212325B00C4DCB4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -109,6 +113,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3F498ABC2212325B00C4DCB4;
 			productRefGroup = 3F498AC62212325C00C4DCB4 /* Products */;
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F498AC92212325C00C4DCB4 /* main.swift in Sources */,
+				3F79C70D246CA91000C47406 /* Operator+Overflow.swift in Sources */,
 				3F498AD0221232C200C4DCB4 /* DateTest.swift in Sources */,
 				3F498AD22212384600C4DCB4 /* Algorithms.swift in Sources */,
 			);
@@ -252,18 +258,20 @@
 		3F498ACD2212325C00C4DCB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		3F498ACE2212325C00C4DCB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
